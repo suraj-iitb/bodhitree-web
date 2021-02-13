@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  frontend:
+    image: frontend
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    stdin_open: true
+    tty: true 
+    volumes:
+      - /bodhitree-web/node_modules # required because node_modules is not in bodhitree-web github repository
+      - .:/bodhitree-web
+    ports:
+      - 7654:7654
