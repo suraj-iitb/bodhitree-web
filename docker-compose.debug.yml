@@ -5,11 +5,14 @@ services:
     image: frontend
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./debug.Dockerfile
     stdin_open: true
     tty: true 
     volumes:
-      - /bodhitree-web/node_modules # required because node_modules is not in bodhitree-web github repository
-      - .:/bodhitree-web
+      - node_modules:/home/node/node_modules # required because node_modules is not in bodhitree-web github repository
+      - .:/home/node
     ports:
       - 7654:7654
+
+volumes: 
+  node_modules:

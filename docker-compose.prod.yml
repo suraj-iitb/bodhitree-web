@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  frontend:
+    image: frontend
+    build:
+      context: .
+      dockerfile: ./prod.Dockerfile 
+    ports:
+      - 7654:80
