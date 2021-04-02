@@ -6,7 +6,7 @@ RUN chown -R node /home/node
 
 COPY ["package.json", "package-lock.json", "./"]
 
-RUN npm install --silent --no-update-notifier --unsafe-perm=true --allow-root
+RUN npm install --silent --no-update-notifier
 
 USER node
 
