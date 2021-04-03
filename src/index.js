@@ -4,12 +4,19 @@ import './index.css';
 import connectionExample from './App';
 import reportWebVitals from './reportWebVitals';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Login from './components/login';
+import SignUp from './components/register';
+import Logout from './components/logout';
+
 
 ReactDOM.render(
   <Router>
     <React.StrictMode>
       <Switch>
         <Route exact path="/" component={connectionExample} />
+				<Route path="/login" component={Login} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/logout" component={Logout} />
       </Switch>
     </React.StrictMode>,
   </Router>,

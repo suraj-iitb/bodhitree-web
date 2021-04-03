@@ -2,7 +2,7 @@ import React from 'react';
 
 class connectionExample extends React.Component {
   componentDidMount() {
-    const apiUrl = "http://127.0.0.1:8764/accounts/api";
+    const apiUrl = "http://127.0.0.1:8765/accounts/api/users";
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => console.log(data));
